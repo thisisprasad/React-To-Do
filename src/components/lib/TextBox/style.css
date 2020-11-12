@@ -1,0 +1,7 @@
+.textbox-component {
+	margin-top: 5px;
+	margin-left: 5px;
+	border: 2px solid grey;
+	border-radius: 3px;
+	padding: 5px;
+}

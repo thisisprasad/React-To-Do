@@ -1,0 +1,22 @@
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li.navbar-li {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px 5px;
+}
+
+li.navbar-left-option {
+	float: left;
+}
+
+li.navbar-right-option {
+	float: right;
+}

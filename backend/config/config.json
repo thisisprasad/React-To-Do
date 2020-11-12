@@ -1,0 +1,10 @@
+{
+	"version": 1.0,
+	"port": 9090,
+	"DBProperties": {
+		"address": "localhost",
+		"port": 27017,
+		"db": "production",
+		"createMetadata": true
+	}
+}

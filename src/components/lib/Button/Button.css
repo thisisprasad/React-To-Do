@@ -1,0 +1,11 @@
+.todo-button {
+	border: none;
+	background-color: #555555;
+	padding: 5px;
+	color: white;
+	font-weight: 600;
+}
+
+.todo-button:hover {
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
