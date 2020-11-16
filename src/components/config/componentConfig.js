@@ -7,15 +7,18 @@ export function getComponentConfig() {
 	return {
 		columns: [
 			{
-				name: 'title',
+				displayText: 'Title',
+				value:'title',
 				visible: true
 			},
 			{
-				name: 'priority',
+				displayText: 'Priority',
+				value: 'priority',
 				visible: true
 			},
 			{
-				name: 'status',
+				displayText: 'Status',
+				value: 'status',
 				visible: true
 			}
 		]

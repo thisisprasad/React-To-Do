@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as config from '../config/componentConfig';
 import './TodoList.css';
 import * as AjaxUtility from '../../common/AjaxUtil';
+import Table from '../lib/Table/Table.component';
 import TextBox from '../lib/TextBox/TextBox.component';
 import Button from '../lib/Button/Button.component';
 import Dropdown from '../lib/Dropdown/Dropdown.component';
@@ -92,7 +93,7 @@ class TodoList extends Component {
 		});
 		var that = this;
 		promise.then(function (data) {
-			if(data.status == Constants.URL_STATUS.SUCCESS){
+			if (data.status == Constants.URL_STATUS.SUCCESS) {
 				console.log("todo inserted in DB...");
 				that.updateTodoList();
 				that.clearInput();
@@ -125,28 +126,10 @@ class TodoList extends Component {
 				<hr></hr>
 
 				<div id="todo-table">
-					<table className="todo-table">
-						<tbody>
-							<tr className="table-row">
-								{
-									that.columnHeaders.map(header => (
-										<th className="row-element">{header.name}</th>
-									))
-								}
-							</tr>
-							{
-								that.state.todoList.map(todoItem => (
-									<tr className="table-row" data-taskId={todoItem.taskId}>
-										{
-											that.columnHeaders.map(header => (
-												<td className="row-element">{todoItem[header.name]}</td>
-											))
-										}
-									</tr>
-								))
-							}
-						</tbody>
-					</table>
+					<Table
+						data={this.state.todoList}
+						headers={this.columnHeaders}
+					/>
 				</div>
 			</div>
 		)

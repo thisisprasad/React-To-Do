@@ -24,29 +24,6 @@
 	border-left: 3px lightgray dotted;
 }
 
-table.todo-table {
-	border-collapse: collapse;
-	margin-left: 10%;
-	width: 80%;
-	max-width: 700px;
-	/* text-align: center; */
-}
-
-.table-row {
-	padding: 8px;
-	text-align: left;
-	border-bottom: 1px solid #ddd;
-}
-
-.row-element {
-	padding: 7px 2px;
+#todo-table {
 	text-align: center;
-	border-right: 1px solid #ddd;
 }
-
-.row-element:last-child {
-	border-right: none;
-}
-
-
-tr:hover {background-color:#f5f5f5;}
