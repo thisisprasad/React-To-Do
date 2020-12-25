@@ -10,7 +10,6 @@ function App() {
         options={navbarOptions}
       />
       <TodoList />
-      <p>This is text</p>
     </div>
   );
 }

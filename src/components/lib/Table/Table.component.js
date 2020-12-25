@@ -21,29 +21,35 @@ class Table extends Component {
 	 */
 	render() {
 		var that = this;
-		return(
-			<table className='table-component'>
-				<tbody>
-					<tr>
+		return (
+			<div>
+				<div class='table-data-operations'>
+					<p>In progress...</p>
+				</div>
+
+				<table className='table-component'>
+					<tbody>
+						<tr>
+							{
+								that.props.headers.map(header => (
+									<th data-value={header.value} >{header.displayText}</th>
+								))
+							}
+						</tr>
 						{
-							that.props.headers.map(header => (
-								<th data-value={header.value} >{header.displayText}</th>
+							that.props.data.map(row => (
+								<tr data-taskid={row.taskId} className='table-row'>
+									{
+										that.props.headers.map(header => (
+											<td className='row-element'>{row[header.value]}</td>
+										))
+									}
+								</tr>
 							))
 						}
-					</tr>
-					{
-						that.props.data.map(row => (
-							<tr data-taskid={row.taskId} className='table-row'>
-								{
-									that.props.headers.map(header => (
-									<td className='row-element'>{row[header.value]}</td>
-									))
-								}
-							</tr>
-						))
-					}
-				</tbody>
-			</table>
+					</tbody>
+				</table>
+			</div>
 		)
 	}
 }
